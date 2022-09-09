@@ -1,0 +1,22 @@
+<div class="infocontainer" style="margin-bottom: 25px">
+  <center>
+    <h4>List of properties</h4>
+    <center>
+      <p>
+        <% @properties.each do |property| %>
+          <div class = container style="display: flex; padding:10px;">
+            <div>
+              <img src="https://images.unsplash.com/photo-1598228723793-52759bba239c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="property" style="width:50px;height:50px;">
+            </div>
+            <div style="text-align: left; margin-left:10px;">
+              <a href="/properties/<%=property.id%>"><%="#{property.title}"%></a><br>
+              <%="Availability: #{property.start_date} -- #{property.end_date} "%></a><br>
+              <%="£#{property.price_per_night} Per Night "%></a>
+            </div>
+          </div>
+        <% end %></b>
+      </p>
+    </center>
+  </center>
+</div>
+
